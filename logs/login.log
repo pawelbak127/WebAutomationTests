@@ -1,0 +1,12 @@
+[2024-10-09 18:21:08.491] [TRACE] com.example.tests.CheckInventory.NewTest - This is a TRACE message
+[2024-10-09 18:21:08.494] [DEBUG] com.example.tests.CheckInventory.NewTest - This is a DEBUG message
+[2024-10-09 18:21:08.495] [INFO] com.example.tests.CheckInventory.NewTest - This is an INFO message
+[2024-10-09 18:21:08.495] [WARN] com.example.tests.CheckInventory.NewTest - This is a WARN message
+[2024-10-09 18:21:08.495] [ERROR] com.example.tests.CheckInventory.NewTest - This is an ERROR message
+[2024-10-09 18:21:10.734] [INFO] com.example.tests.Login.LoginTest - Opened browser and navigated to the login page.
+[2024-10-09 18:21:10.737] [INFO] com.example.tests.Login.LoginTest - Attempting to log in with username: standard_user
+[2024-10-09 18:21:11.223] [INFO] com.example.tests.Login.LoginTest - Browser closed.
+[2024-10-09 18:21:12.732] [INFO] com.example.tests.Login.LoginTest - Opened browser and navigated to the login page.
+[2024-10-09 18:21:12.733] [INFO] com.example.tests.Login.LoginTest - Attempting to log in with username: standard_user
+[2024-10-09 18:21:12.997] [INFO] com.example.tests.Login.LoginTest - Error message displayed: Epic sadface: Username and password do not match any user in this service
+[2024-10-09 18:21:13.177] [INFO] com.example.tests.Login.LoginTest - Browser closed.
