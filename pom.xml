@@ -2,41 +2,84 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- Wersja modelu POM -->
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>WebAutomationTests</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <!-- Identyfikacja projektu -->
+    <groupId>org.example</groupId> <!-- Grupa identyfikująca projekt -->
+    <artifactId>WebAutomationTests</artifactId> <!-- Unikalna nazwa artefaktu -->
+    <version>1.0-SNAPSHOT</version> <!-- Wersja projektu -->
 
     <properties>
+        <!-- Wersja źródłowa i docelowa kompilatora Java -->
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Kodowanie źródłowe -->
+        <project.build.source.encoding>UTF-8</project.build.source.encoding>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <!-- Zarządzanie zależnościami dla log4j -->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-bom</artifactId> <!-- BOM (Bill of Materials) dla log4j -->
+                <version>2.24.1</version> <!-- Wersja BOM -->
+                <type>pom</type> <!-- Typ zależności -->
+                <scope>import</scope> <!-- Zakres importu zależności -->
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
-        <!-- Dodanie TestNG -->
+        <!-- Zależność TestNG do testowania -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.7.0</version> <!-- Użyj najnowszej wersji TestNG -->
-            <scope>test</scope>
+            <version>7.7.0</version> <!-- Wersja TestNG -->
+            <scope>test</scope> <!-- Zakres użycia tylko w testach -->
         </dependency>
 
-        <!-- Dodanie Logback do logowania -->
+        <!-- Zależność SLF4J dla prostego logowania -->
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
-        </dependency>
-        <!-- Jansi for color support in Logback -->
-        <dependency>
-            <groupId>org.fusesource.jansi</groupId>
-            <artifactId>jansi</artifactId>
-            <version>2.4.0</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.36</version> <!-- Wersja SLF4J -->
+            <!-- Upewnij się, że wersja jest zgodna z pozostałymi zależnościami -->
         </dependency>
 
+        <!-- Zależności log4j dla API i rdzenia -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId> <!-- API log4j -->
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId> <!-- Rdzeń log4j -->
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j2-impl</artifactId> <!-- Implementacja SLF4J dla log4j -->
+            <scope>runtime</scope> <!-- Zakres użycia w czasie działania -->
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-jul</artifactId> <!-- Integracja log4j z Java Util Logging -->
+            <scope>runtime</scope> <!-- Zakres użycia w czasie działania -->
+        </dependency>
+
+        <!-- Zależność Selenium do automatyzacji przeglądarek -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.25.0</version> <!-- Wersja Selenium -->
+        </dependency>
+
+        <!-- Zależność WebDriverManager do zarządzania WebDriverem -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.5.0</version> <!-- Wersja WebDriverManager -->
+        </dependency>
     </dependencies>
-
-
 </project>
