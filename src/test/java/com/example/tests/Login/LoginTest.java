@@ -43,7 +43,7 @@ public class LoginTest {
     }
     @Test
     public void correctTestLogin() {
-
+        logger.info("Start the test of correct login");
         performLogin("standard_user", "secret_sauce");
         // Checking if Login is success
         String expectedUrl = "https://www.saucedemo.com/inventory.html";
@@ -51,7 +51,7 @@ public class LoginTest {
         logger.info("Correct login test completed.");}
     @Test
     public void incorrecttestLogin() {
-
+        logger.info("Start the test of incorrect login");
         performLogin("standard_user", "incorrect_pass");
 
         // Check if there was error message. If so, the test will be passed.

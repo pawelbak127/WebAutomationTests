@@ -10,3 +10,19 @@
 [2024-10-09 18:21:12.733] [INFO] com.example.tests.Login.LoginTest - Attempting to log in with username: standard_user
 [2024-10-09 18:21:12.997] [INFO] com.example.tests.Login.LoginTest - Error message displayed: Epic sadface: Username and password do not match any user in this service
 [2024-10-09 18:21:13.177] [INFO] com.example.tests.Login.LoginTest - Browser closed.
+[2024-10-09 18:41:08.100] [TRACE] com.example.tests.CheckInventory.NewTest - This is a TRACE message
+[2024-10-09 18:41:08.103] [DEBUG] com.example.tests.CheckInventory.NewTest - This is a DEBUG message
+[2024-10-09 18:41:08.104] [INFO] com.example.tests.CheckInventory.NewTest - This is an INFO message
+[2024-10-09 18:41:08.104] [WARN] com.example.tests.CheckInventory.NewTest - This is a WARN message
+[2024-10-09 18:41:08.104] [ERROR] com.example.tests.CheckInventory.NewTest - This is an ERROR message
+[2024-10-09 18:41:10.462] [INFO] com.example.tests.Login.LoginTest - Opened browser and navigated to the login page.
+
+[2024-10-09 18:41:10.467] [INFO] com.example.tests.Login.LoginTest - Start the test of correct login
+[2024-10-09 18:41:10.469] [INFO] com.example.tests.Login.LoginTest - Attempting to log in with username: standard_user
+[2024-10-09 18:41:11.259] [INFO] com.example.tests.Login.LoginTest - Correct login test completed.
+[2024-10-09 18:41:11.793] [INFO] com.example.tests.Login.LoginTest - Browser closed.
+[2024-10-09 18:41:13.733] [INFO] com.example.tests.Login.LoginTest - Opened browser and navigated to the login page.
+[2024-10-09 18:41:13.734] [INFO] com.example.tests.Login.LoginTest - Start the test of incorrect login
+[2024-10-09 18:41:13.735] [INFO] com.example.tests.Login.LoginTest - Attempting to log in with username: standard_user
+[2024-10-09 18:41:14.060] [INFO] com.example.tests.Login.LoginTest - Error message displayed: Epic sadface: Username and password do not match any user in this service
+[2024-10-09 18:41:14.549] [INFO] com.example.tests.Login.LoginTest - Browser closed.
